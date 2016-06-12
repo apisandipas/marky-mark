@@ -36,9 +36,7 @@
           $output = $(document.getElementById('output'));
 
       $input.keyup(throttle(function(){
-       
         $output.html( marked( $input.val() )  );
-          
       }, 100));
   </script>
 </html>
