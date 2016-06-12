@@ -28,8 +28,9 @@
     <div id="output">Preview</div>
   </body>
   <script>
-      var $ = require('jquery');
-      var marked = require('marked');
+    (function(){
+      var $        = require('jquery');
+      var marked   = require('marked');
       var throttle = require('lodash/throttle');
 
       var $input  = $(document.getElementById('input')),
@@ -38,5 +39,6 @@
       $input.keyup(throttle(function(){
         $output.html( marked( $input.val() )  );
       }, 100));
+    })()
   </script>
 </html>
